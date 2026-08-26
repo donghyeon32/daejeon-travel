@@ -440,7 +440,7 @@ a.p:hover::after,a.chain__i:hover::after{color:var(--accent)}
   .mosaic{grid-template-columns:1.32fr 1fr}
   .ph--a{grid-column:1;grid-row:1/3;aspect-ratio:3/4}
   .hero__mascot{width:clamp(155px,16vw,200px);top:-70px;right:0}
-  .myth__grid{grid-template-columns:repeat(3,1fr)}
+  .myth__grid{grid-template-columns:repeat(2,1fr);column-gap:56px}
   .bento{grid-template-columns:repeat(4,1fr)}
   .spot{aspect-ratio:4/5}
   .grp{display:grid;grid-template-columns:280px 1fr;gap:40px;align-items:start}
@@ -523,14 +523,6 @@ a.p:hover::after,a.chain__i:hover::after{color:var(--accent)}
       <article class="mcard">
         <div class="mcard__rule"></div><p class="mcard__big">15<span class="mcard__unit">곳</span></p><p class="mcard__truth">빵집만 도는 버스가 있습니다</p>
         <p class="mcard__proof">빵시투어 경유 순서는 동구 → 대덕구 → 대전시립미술관 → 유성구 → 서구 → 중구. 성심당은 마지막 정거장입니다.</p>
-      </article>
-      <article class="mcard">
-        <div class="mcard__rule"></div><p class="mcard__big">0<span class="mcard__unit">원</span></p><p class="mcard__truth">24시간 열려 있는 노천 족욕장</p>
-        <p class="mcard__proof">유성온천 족욕체험장은 전국 최대 규모 야외 온천 족욕장이고, 누구나 24시간 무료로 이용합니다.</p>
-      </article>
-      <article class="mcard">
-        <div class="mcard__rule"></div><p class="mcard__big">22<span class="mcard__unit">시</span></p><p class="mcard__truth">밤 10시까지 별을 봅니다</p>
-        <p class="mcard__proof">대전시민천문대는 국내 최초의 시민 천문대이고 관람료가 없습니다. 낮에는 태양을, 밤에는 행성과 달을 관측합니다.</p>
       </article>
     </div>
   </div>
@@ -871,7 +863,7 @@ var COURSES=[
  n:'인근 먹거리는 중앙시장과 선화동 전문음식특화거리.'},
 {o:'자유여행 · 테마코스',c:'amber',t:'휴식과 체험의 균형 있는 여행',s:'족욕으로 시작해 과학관으로 끝내기',th:['nature','science','art'],si:['day','walk'],m:['지하철 이용','예약 불필요'],l:CT,
  r:[['','유성고속·시외버스터미널'],['','유성온천 족욕체험'],['','한밭수목원'],['','대전시립미술관'],['','엑스포다리'],['','엑스포과학공원'],['','국립중앙과학관']],
- n:'유성온천 족욕체험장은 24시간 무료입니다. 인근 먹거리는 봉명동 먹자골목, 만년동 음식문화특화거리.'},
+ n:'유성온천 족욕체험장은 연중무휴 07시~22시에 무료로 운영합니다(대전 유성구 봉명동 574, 유성온천공원 내). 인근 먹거리는 봉명동 먹자골목, 만년동 음식문화특화거리.'},
 {o:'자유여행 · 테마코스',c:'amber',t:'원도심 문화산책',s:'근대 건축유산부터 소제동 카페거리까지',th:['history','art','village'],si:['day','walk'],m:['지하철 이용','예약 불필요'],l:CT,
  r:[['','대전복합터미널'],['','대동하늘공원'],['','대흥동 소극장'],['','헤레디움'],['','대전창작센터'],['','소제동 철도관사촌 · 소제동 카페거리']],
  n:'인근 먹거리는 으능정이 문화의 거리, 중앙시장, 소제동 카페거리.'},
