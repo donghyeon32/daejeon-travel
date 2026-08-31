@@ -39,7 +39,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#FFFFFF">
 <title>대전 — 성심당만 찍고 가기엔 아까운 도시</title>
-<meta name="description" content="대전시가 실제로 운영하는 39개 여행 코스. 테마와 상황으로 골라 시간표까지 확인하세요.">
+<meta name="description" content="대전시가 실제로 운영하는 37개 여행 코스. 테마와 상황으로 골라 시간표까지 확인하세요.">
 
 <!-- ─────────────────────────────────────────────────────────────
      카카오톡 · SNS 공유 미리보기
@@ -50,7 +50,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="대전 관광">
 <meta property="og:title" content="대전 — 성심당만 찍고 가기엔 아까운 도시">
-<meta property="og:description" content="대전시가 실제로 운영하는 39개 여행 코스. 테마와 상황으로 골라 시간표까지 확인하세요.">
+<meta property="og:description" content="대전시가 실제로 운영하는 37개 여행 코스. 테마와 상황으로 골라 시간표까지 확인하세요.">
 <meta property="og:url" content="https://example.com/">
 <meta property="og:image" content="https://example.com/share.jpg">
 <meta property="og:image:width" content="1200">
@@ -58,7 +58,7 @@
 <meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="대전 — 성심당만 찍고 가기엔 아까운 도시">
-<meta name="twitter:description" content="새벽 반딧불이 투어, 빵집 15곳 순례, 맨발 황톳길. 39개 코스를 한눈에.">
+<meta name="twitter:description" content="새벽 반딧불이 투어, 빵집 앞에 서는 버스, 맨발 황톳길. 37개 코스를 한눈에.">
 <meta name="twitter:image" content="https://example.com/share.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -144,14 +144,17 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
 .hero h1{
   font-family:var(--f-d);font-weight:400;
   /* 가장 긴 줄이 10글자라, 칸 너비에 맞춰 자동으로 줄어듭니다 */
-  font-size:clamp(1.85rem,6.6vw,3.3rem);line-height:1.12;letter-spacing:-.042em;
+  font-size:clamp(2.15rem,7.2vw,3.6rem);line-height:1.1;letter-spacing:-.045em;
   margin:0 0 20px;text-wrap:balance;
 }
 .hero h1 .l1,.hero h1 .l2{display:block}
 .hero h1 .l2{display:block;color:var(--accent)}
-.hero__sub{font-size:clamp(.98rem,2.5vw,1.14rem);color:var(--ink-2);max-width:38ch;margin:0 0 30px;line-height:1.66}
-.hero__sub b{color:var(--ink);font-weight:700}
-.hero__cta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px}
+.hero__sub{font-size:clamp(1.02rem,2.6vw,1.2rem);color:var(--ink-2);max-width:46ch;margin:0 0 32px;line-height:1.72}
+.hero__sub b{
+  display:inline-block;color:var(--ink);font-weight:700;
+  font-size:1.18em;letter-spacing:-.03em;margin-bottom:8px;
+}
+.hero__cta{position:relative;display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px}
 .hero__stats{display:flex;flex-wrap:wrap;border-top:1px solid var(--ink)}
 .stat{padding:15px 24px 0 0;margin-right:24px;border-right:1px solid var(--hair)}
 .stat:last-child{border-right:0;margin-right:0;padding-right:0}
@@ -178,11 +181,10 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
    더 크게 하려면 아래 width 의 가운데 숫자를 키우세요.
    화면이 넓어지면 아래쪽 @media 규칙이 크기를 다시 정합니다. */
 .hero__copy{position:relative}
-.hero__mascot{
-  position:absolute;right:-4px;top:-14px;
-  width:clamp(72px,19vw,108px);height:auto;z-index:3;pointer-events:none;
-  filter:drop-shadow(0 12px 20px rgba(60,30,10,.2));animation:bob 5.5s ease-in-out infinite;
-}
+/* 꿈돌이 자리 — 글 오른쪽 빈 공간에 세웁니다.
+   좁은 화면에는 빈 공간이 없어 글씨를 가리므로 숨깁니다(display:none).
+   크기를 바꾸려면 아래 @media 안의 width 를 조절하세요. */
+.hero__mascot{display:none}
 @keyframes bob{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-11px) rotate(4deg)}}
 
 /* ─── 하단 자동 스크롤 사진 띠 ─── */
@@ -377,10 +379,10 @@ a.p:hover::after,a.chain__i:hover::after{color:var(--accent)}
 .panel__cost b{color:var(--ink);font-weight:600}
 
 /* ═══════ 6. CTA ═══════ */
-.cta{background:var(--surface-2);border-top:1px solid var(--hair)}
+.cta{background:var(--surface-2);border-top:1px solid var(--hair);padding-bottom:132px}
 .cta h2{font-family:var(--f-d);font-weight:400;font-size:clamp(2rem,7vw,3.5rem);line-height:1.06;letter-spacing:-.04em;margin:0 0 16px}
 .cta h2 span{color:var(--accent)}
-.cta__sub{color:var(--ink-2);max-width:44ch;margin:0 0 30px;font-size:1rem}
+.cta__sub{color:var(--ink-2);margin:0 0 30px;font-size:1rem;text-wrap:balance}
 .cta__big{margin-bottom:44px}
 .qrs{display:grid;gap:10px}
 .qr{
@@ -396,18 +398,7 @@ a.p:hover::after,a.chain__i:hover::after{color:var(--accent)}
 .qr__desc{display:block;font-size:.81rem;color:var(--muted);margin-bottom:6px;line-height:1.5}
 .qr__link{display:block;font-family:var(--f-m);font-size:.7rem;color:var(--accent);word-break:break-all}
 
-.access{margin-top:34px;padding:26px 22px;background:var(--paper);border:1px solid var(--hair)}
-.access__t{font-family:var(--f-m);font-size:.66rem;letter-spacing:.16em;color:var(--muted-2);margin:0 0 16px}
-.asteps{list-style:none;margin:0;padding:0;display:grid;gap:11px;counter-reset:s}
-.asteps li{counter-increment:s;position:relative;padding-left:32px;font-size:.88rem;color:var(--ink-2)}
-.asteps li::before{
-  content:counter(s,decimal-leading-zero);position:absolute;left:0;top:1px;
-  font-family:var(--f-m);font-size:.72rem;color:var(--accent);font-weight:600;
-}
 
-.foot{background:var(--paper);border-top:1px solid var(--hair);color:var(--muted);font-size:.78rem;padding:34px 0 110px}
-.foot p{margin:0 0 8px;line-height:1.72;max-width:78ch}
-.foot b{color:var(--ink-2);font-weight:600}
 
 .sticky{
   position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;gap:8px;
@@ -417,14 +408,18 @@ a.p:hover::after,a.chain__i:hover::after{color:var(--accent)}
 }
 .sticky.is-on{transform:none}
 .sticky .btn{flex:1;padding:14px 12px;font-size:.9rem}
-@media(min-width:900px){.sticky{display:none}.foot{padding-bottom:44px}}
+@media(min-width:900px){.sticky{display:none}.cta{padding-bottom:104px}}
 
 /* ─────── 반응형 : 767px 이하는 모두 1열 ─────── */
 @media(min-width:768px){
   .sec{padding:96px 0}
   .strip__h{padding-left:32px;padding-right:32px}
   .wrap,.hero__inner,.filters__in{padding-left:32px;padding-right:32px}
-  .hero__mascot{width:clamp(148px,22vw,196px);top:-62px;bottom:auto;right:6px}
+  .hero__mascot{
+    display:block;position:absolute;right:4px;top:auto;bottom:0;
+    width:clamp(128px,17vw,172px);height:auto;z-index:3;pointer-events:none;
+    filter:drop-shadow(0 12px 20px rgba(60,30,10,.2));animation:bob 5.5s ease-in-out infinite;
+  }
   .myth__grid{grid-template-columns:repeat(2,1fr);column-gap:44px}
   .mcard{padding:28px 0}
   .bento{grid-template-columns:repeat(2,1fr);gap:12px}
@@ -439,7 +434,7 @@ a.p:hover::after,a.chain__i:hover::after{color:var(--accent)}
   .hero__inner{grid-template-columns:1.2fr .8fr;gap:52px;align-items:center}
   .mosaic{grid-template-columns:1.32fr 1fr}
   .ph--a{grid-column:1;grid-row:1/3;aspect-ratio:3/4}
-  .hero__mascot{width:clamp(155px,16vw,200px);top:-70px;right:0}
+  .hero__mascot{width:clamp(140px,14vw,180px);right:-6px}
   .myth__grid{grid-template-columns:repeat(2,1fr);column-gap:56px}
   .bento{grid-template-columns:repeat(4,1fr)}
   .spot{aspect-ratio:4/5}
@@ -462,26 +457,26 @@ a.p:hover::after,a.chain__i:hover::after{color:var(--accent)}
 <header class="hero">
   <div class="hero__inner">
     <div class="hero__copy">
-      <!-- 캐릭터 넣는 자리 · 꿈돌이
-           대전광역시 승인 완료. 공식 이미지가 파일 안에 들어 있어
-           인터넷 없이도 보입니다.
-
-           다른 그림으로 바꾸려면 아래 <img> 의 긴 src="data:image/webp;base64,..." 를
-           지우고 src="꿈돌이.png" 로 적으세요.
-           이미지 파일은 index.html 과 같은 폴더에 두고,
-           배경이 없는 PNG(투명 배경)를 쓰면 가장 깔끔합니다. -->
-      <img class="hero__mascot" src="data:image/webp;base64,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" alt="대전 마스코트 꿈돌이">
       <!-- 메인 카피 자리 -->
       <h1><span class="l1">성심당만 찍고 가기엔</span><span class="l2">대전, 너무 아깝다</span></h1>
-      <p class="hero__sub">새벽 5시 반딧불이 투어, 5개 구 빵집 15곳 순례, 맨발로 걷는 황톳길.<br><b>전부 대전시가 실제로 운영하는 코스입니다.</b></p>
+      <p class="hero__sub"><b>성심당 말고 뭐가 있냐고요?</b><br>새벽 반딧불이, 맨발로 걷는 흙길, 빵집 앞에 서는 버스.<br>전부 대전시가 운영하는 코스, 모두 37개입니다.</p>
       <div class="hero__cta">
-        <a class="btn btn--go" href="#finder">코스 39개 보기</a>
-        <a class="btn btn--line" href="#plan">추천 일정 먼저 보기</a>
+      <!-- 캐릭터 넣는 자리 · 꿈돌이
+             대전광역시 승인 완료. 공식 이미지가 파일 안에 들어 있어
+             인터넷 없이도 보입니다.
+
+             다른 그림으로 바꾸려면 아래 <img> 의 긴 src="data:image/webp;base64,..." 를
+             지우고 src="꿈돌이.png" 로 적으세요.
+             이미지 파일은 index.html 과 같은 폴더에 두고,
+             배경이 없는 PNG(투명 배경)를 쓰면 가장 깔끔합니다. -->
+        <img class="hero__mascot" src="data:image/webp;base64,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" alt="대전 마스코트 꿈돌이">
+        <a class="btn btn--go" href="#finder">코스 37개 보기</a>
+        <a class="btn btn--line" href="https://www.daejeoncitytour.co.kr" target="_blank" rel="noopener">시티투어 예약하기 ↗</a>
       </div>
       <div class="hero__stats">
         <div class="stat"><div class="stat__n">1시간</div><div class="stat__l">서울역 → 대전역 KTX</div></div>
-        <div class="stat"><div class="stat__n">39개</div><div class="stat__l">예약 가능한 코스</div></div>
-        <div class="stat"><div class="stat__n">0원</div><div class="stat__l">해설사 동행 무료 투어</div></div>
+        <div class="stat"><div class="stat__n">37개</div><div class="stat__l">예약 가능한 코스</div></div>
+        <div class="stat"><div class="stat__n">10,000원</div><div class="stat__l">시티투어 정기코스 하루</div></div>
       </div>
     </div>
 
@@ -521,8 +516,8 @@ a.p:hover::after,a.chain__i:hover::after{color:var(--accent)}
         <p class="mcard__proof">대청호오백리길 21개 구간, 대청호반길 57.5km. 자전거길도 3개 코스가 따로 나 있습니다.</p>
       </article>
       <article class="mcard">
-        <div class="mcard__rule"></div><p class="mcard__big">15<span class="mcard__unit">곳</span></p><p class="mcard__truth">빵집만 도는 버스가 있습니다</p>
-        <p class="mcard__proof">빵시투어 경유 순서는 동구 → 대덕구 → 대전시립미술관 → 유성구 → 서구 → 중구. 성심당은 마지막 정거장입니다.</p>
+        <div class="mcard__rule"></div><p class="mcard__big">8<span class="mcard__unit">곳</span></p><p class="mcard__truth">빵집 앞에 바로 세워주는 버스</p>
+        <p class="mcard__proof">빵시투어가 A·B 두 노선으로 바뀌었습니다. 노선마다 인기 빵집 네 곳에 내려 매장마다 40~50분씩 머뭅니다. 회차당 18명.</p>
       </article>
     </div>
   </div>
@@ -552,7 +547,7 @@ a.p:hover::after,a.chain__i:hover::after{color:var(--accent)}
 
   <div class="wrap">
     <div class="rbar">
-      <span class="rbar__n"><b id="count">39</b>개 코스</span>
+      <span class="rbar__n"><b id="count">37</b>개 코스</span>
       <span class="rbar__p" id="selected">전체 보기</span>
     </div>
     <div id="groups"></div>
@@ -615,8 +610,8 @@ a.p:hover::after,a.chain__i:hover::after{color:var(--accent)}
 <section class="sec plan" id="plan">
   <div class="wrap">
     <p class="eyebrow">READY MADE</p>
-    <h2 class="h2">짜기 귀찮으면 이대로만</h2>
-    <p class="lede">세 일정 모두 대전시가 실제로 운행하는 상품의 시간표 그대로입니다.</p>
+    <h2 class="h2">일정은 저희가 짤게요</h2>
+    <p class="lede">몇 시에 어디로 갈지 고민하지 않으셔도 됩니다.<br>시간만 맞춰서 오세요!</p>
 
     <div class="tabs" role="tablist" aria-label="추천 일정 유형">
       <button class="tab" role="tab" id="tab-half" aria-controls="p-half" aria-selected="true">반나절 · 4시간</button>
@@ -632,10 +627,10 @@ a.p:hover::after,a.chain__i:hover::after{color:var(--accent)}
     </div>
 
     <div class="panel" role="tabpanel" id="p-day" aria-labelledby="tab-day" hidden>
-      <h3 class="panel__h">시티투어 마실코스 · 토요일</h3>
-      <p class="panel__m">문화관광해설사 동행 · 7~8월 미운행 · 승·하차 지점 2곳</p>
+      <h3 class="panel__h">시티투어 마실코스 · 토요마실</h3>
+      <p class="panel__m">매주 토요일 · 도슨트 해설 포함 · 승·하차 지점 2곳 · 일반 10,000원</p>
       <div data-route="day"></div>
-      <p class="rnote" style="--gc:var(--accent)"><b>참고</b>요일마다 코스가 다릅니다. 화요일은 뿌리공원·상소동산림욕장, 수요일은 테미오래·국립대전현충원, 목요일은 장태산자연휴양림 코스로 운행합니다.</p>
+      <p class="rnote" style="--gc:var(--accent)"><b>참고</b>요일마다 코스가 다릅니다. 화·목요일은 한밭수목원과 대전시립박물관을 도는 대전마실 A, 수·금요일은 뿌리공원과 테미오래를 도는 대전마실 B, 일요일은 보문산과 장태산으로 가는 일요마실이 운행합니다.</p>
       <div class="panel__cost"><span>예약 <b>daejeoncitytour.co.kr</b></span><span>문의 <b>042-254-4555</b></span></div>
     </div>
 
@@ -691,27 +686,8 @@ a.p:hover::after,a.chain__i:hover::after{color:var(--accent)}
         </span>
       </a>
     </div>
-
-    <div class="access">
-      <p class="access__t">승강장 찾아가기 · 대전트래블라운지 (동구 중앙로 187-1)</p>
-      <ol class="asteps">
-        <li>대전역 지하철 4번 출구로 이동해 지하로 내려갑니다.</li>
-        <li>역전지하상가 입구로 진입해 직진합니다.</li>
-        <li>'목척교 · 대전트래블라운지 · 우리은행 →' 표지판에서 우측으로 이동합니다.</li>
-        <li>역전지하상가 4번 출구로 나갑니다.</li>
-        <li>계단을 올라오면 트래블라운지에 도착합니다.</li>
-      </ol>
-    </div>
   </div>
 </section>
-
-<footer class="foot">
-  <div class="wrap">
-    <p><b>출처</b> — 코스·시간표·요금·연락처는 대전광역시 공식 관광 안내서 『대전을 담다』(국문) 수록 내용입니다.</p>
-    <p>코스와 운영 시각은 사정에 따라 변경될 수 있습니다. 방문 전 대전시티투어 홈페이지에서 확인해 주세요.</p>
-    <p><b>캐릭터</b> — 꿈돌이를 비롯한 꿈씨패밀리는 대전광역시 소유 IP이며, 사용 승인을 받아 적용했습니다.</p>
-  </div>
-</footer>
 
 <nav class="sticky" id="sticky" aria-label="빠른 이동">
   <a class="btn btn--line" href="#finder">코스 찾기</a>
@@ -755,28 +731,22 @@ var THEMES={nature:'자연·숲길',bread:'빵·미식',art:'예술·전시',his
 /* 상황 필터 — 이 조건들은 '모두 만족'해야 코스가 남습니다 */
 /* 상황 필터 — 이 조건들은 '모두 만족'해야 코스가 남습니다 */
 /* 상황 필터 — 이 조건들은 '모두 만족'해야 코스가 남습니다 */
-var SITS={half:'반나절',day:'당일치기',overnight:'1박 2일',dark:'새벽·야간 출발',free:'무료',guide:'해설사 동행',bus:'버스로 이동',walk:'걷기·자전거'};
+var SITS={half:'반나절',day:'당일치기',overnight:'1박 2일',dark:'새벽·야간 출발',free:'무료',guide:'도슨트 해설',bus:'버스로 이동',walk:'걷기·자전거'};
 
 var COURSES=[
 /* ── 시티투어 마실코스 ── */
-{o:'시티투어 · 마실코스',c:'coral',t:'화요일 코스',s:'명상정원에서 뿌리공원, 상소동 산림욕장까지',th:['nature','history'],si:['day','guide','bus'],m:['매주 화','09:30 – 17:30'],l:CT,
- r:[['09:30','시청남문광장 출발'],['10:00','대전트래블라운지'],['10:30 – 11:30','대청호 명상정원'],['12:00 – 13:00','중식 · 중앙시장'],['13:30 – 14:30','뿌리공원 · 한국족보박물관'],['15:00 – 16:15','상소동 산림욕장'],['16:45','한화생명 볼파크 하차'],['17:00','대전트래블라운지 하차'],['17:30','시청남문광장 하차']],
- n:'문화관광해설사가 동행합니다. 7~8월에는 운행하지 않습니다.'},
-{o:'시티투어 · 마실코스',c:'coral',t:'수요일 코스',s:'테미오래와 국립대전현충원',th:['history'],si:['day','guide','bus'],m:['매주 수','09:30 – 17:30'],l:CT,
- r:[['09:30','시청남문광장 출발'],['10:00','대전트래블라운지'],['10:30 – 11:30','테미오래 (옛 충청남도 관사촌)'],['11:40 – 13:00','중식 · 중앙시장'],['13:30 – 15:00','국립대전현충원'],['15:20 – 16:00','대전시립박물관'],['16:40','한화생명 볼파크 하차'],['17:00','대전트래블라운지 하차'],['17:30','시청남문광장 하차']],
- n:'7~8월 미운행.'},
-{o:'시티투어 · 마실코스',c:'coral',t:'목요일 코스',s:'장태산 메타세쿼이아 숲에서 반나절',th:['nature','history'],si:['day','guide','bus'],m:['매주 목','09:30 – 17:30'],l:CT,
- r:[['09:30','시청남문광장 출발'],['10:00','대전트래블라운지'],['10:50 – 13:30','장태산 자연휴양림 &amp; 중식 (인근식당)'],['14:10 – 15:10','대전근현대사전시관'],['15:20 – 16:20','한밭교육박물관'],['16:40','한화생명 볼파크 하차'],['17:00','대전트래블라운지 하차'],['17:30','시청남문광장 하차']],
- n:'7~8월 미운행.'},
-{o:'시티투어 · 마실코스',c:'coral',t:'금요일 코스',s:'미술관과 수목원을 하루에',th:['nature','art','science'],si:['day','guide','bus'],m:['매주 금','09:30 – 17:30'],l:CT,
- r:[['09:30','대전트래블라운지 출발'],['10:00','시청남문광장'],['10:40 – 12:00','명상정원 및 대청호자연생태관 디지털영상관'],['12:30 – 13:50','중식 · 중앙시장'],['14:10 – 15:00','대전시립미술관'],['15:10 – 16:20','한밭수목원 · 천연기념물센터 · 곤충생태관'],['16:45','시청남문광장 하차'],['17:10','한화생명 볼파크 하차'],['17:30','대전트래블라운지 하차']],
- n:'7~8월 미운행.'},
-{o:'시티투어 · 마실코스',c:'coral',t:'토요일 코스',s:'계족산 황톳길 + 뻔뻔한클래식 음악회',th:['nature','art'],si:['day','guide','bus'],m:['매주 토','09:30 – 17:30'],l:CT,
- r:[['09:30','대전트래블라운지 출발'],['10:00','시청남문광장 출발'],['10:10 – 11:50','한밭수목원 · 천연기념물센터 · 곤충생태관'],['12:00 – 13:20','대전문화예술단지 (중식)'],['13:50 – 15:50','계족산 황톳길 체험 &amp; 뻔뻔한클래식 음악회'],['16:45','시청남문광장 하차'],['17:10','한화생명 볼파크 하차'],['17:30','대전트래블라운지 하차']],
- n:'맨발 걷기를 하니 물티슈와 여벌 양말을 챙기면 좋습니다.'},
-{o:'시티투어 · 마실코스',c:'coral',t:'일요일 코스',s:'대청호와 장태산, 물과 숲을 하루에',th:['nature','village'],si:['day','guide','bus'],m:['매주 일','09:30 – 17:30'],l:CT,
- r:[['09:30','시청남문광장 출발'],['10:00','대전트래블라운지 출발'],['10:30 – 11:50','명상정원 및 대청호자연생태관 디지털영상관'],['12:20 – 13:30','으능정이 문화의거리 (중식)'],['14:20 – 15:50','장태산 자연휴양림'],['16:40','한화생명 볼파크 하차'],['17:00','대전트래블라운지 하차'],['17:30','시청남문광장 하차']],
- n:'7~8월 미운행.'},
+{o:'시티투어 · 마실코스',c:'coral',t:'대전마실 A · 화·목',s:'도시의 역사와 문화를 하루에 담은 코스',th:['history','nature','art'],si:['day','guide','bus'],m:['화·목 운행','일반 10,000원'],l:CT,
+ r:[['10:00','대전트래블라운지 출발'],['10:30','대전시청 남문광장 경유'],['11:00','한밭수목원 하차 · 대전시립연정국악원 주차장'],['11:00 – 13:30','한밭수목원 일대 자율투어 150분'],['13:40','한밭수목원 승차 · 대전시립연정국악원 주차장'],['14:10 – 15:00','대전시립박물관 · 도슨트'],['15:20 – 16:30','국립대전현충원 · 도슨트'],['17:00','으능정이 문화의 거리 복귀 및 종료']],
+ n:'종료 지점인 으능정이 거리에 성심당 본점과 꿈돌이 호두과자 은행점이 있습니다. 대전시립박물관과 국립대전현충원은 참가 인원에 따라 도슨트 프로그램이 달라질 수 있고, 현장 상황에 따라 코스와 시각, 승·하차 장소가 바뀔 수 있습니다.'},
+{o:'시티투어 · 마실코스',c:'coral',t:'대전마실 B · 수·금',s:'대전의 과거와 현재를 느끼는 코스',th:['history','village'],si:['day','guide','bus'],m:['수·금 운행','일반 10,000원'],l:CT,
+ r:[['10:00','대전시청 남문광장 출발'],['10:30','대전트래블라운지 경유'],['11:00 – 12:00','뿌리공원 · 효문화진흥원 · 도슨트'],['12:30','으능정이 문화의 거리 하차 · 금강제화 대전본점 앞'],['12:30 – 13:40','자유 중식 및 자율투어 70분'],['13:50','으능정이 문화의 거리 승차 · 금강제화 대전본점 앞'],['14:10 – 15:00','테미오래 근현대 관사촌 · 도슨트'],['15:20 – 16:30','우암사적공원 · 비 오면 한밭교육박물관'],['17:00','대전트래블라운지 경유 후 대전시청 복귀 및 종료']],
+ n:'비가 오면 우암사적공원 대신 한밭교육박물관으로 갑니다. 현장 상황에 따라 코스와 시각, 승·하차 장소가 바뀔 수 있습니다.'},
+{o:'시티투어 · 마실코스',c:'coral',t:'토요마실 · 토',s:'원도심과 숲, 호수를 함께 도는 하루',th:['history','nature'],si:['day','guide','bus'],m:['토요일 운행','일반 10,000원'],l:CT,
+ r:[['10:00 – 10:30','대전시청 남문광장 출발 · 대전트래블라운지 경유'],['10:45 – 11:15','우암사적공원 · 도슨트'],['11:30','동춘당 하차 · 동춘당 버스정류장 앞'],['11:25 – 12:50','동춘당 관람 및 자유 중식'],['13:00','동춘당 승차 · 동춘당 버스정류장 앞'],['13:40 – 14:40','금강로하스대청공원'],['15:30 – 16:00','대청호 명상정원'],['16:30','대전시청 남문광장'],['17:00','으능정이 문화의 거리 복귀 및 종료']],
+ n:'현장 상황에 따라 코스와 시각, 승·하차 장소가 바뀔 수 있습니다.'},
+{o:'시티투어 · 마실코스',c:'coral',t:'일요마실 · 일',s:'자연과 회복의 시간을 담은 하루',th:['nature','history','village'],si:['day','guide','bus'],m:['일요일 운행','일반 10,000원'],l:CT,
+ r:[['10:00','대전트래블라운지 출발'],['10:30 – 11:30','보문산 큰나무 전망대 · 대전목재문화체험장'],['12:00','으능정이 문화의 거리 하차 · 금강제화 대전본점 앞'],['12:00 – 13:20','대전 원도심 일대 자유투어 80분'],['13:30','으능정이 문화의 거리 승차 · 금강제화 4번 출구 앞'],['14:00 – 15:00','대전시립박물관 · 도슨트'],['15:30 – 16:30','장태산 자연휴양림 숲길 산책'],['17:00','으능정이 문화의 거리 복귀 및 종료']],
+ n:'체험비는 따로 냅니다. 대전시립박물관은 참가 인원에 따라 도슨트 프로그램이 달라질 수 있습니다.'},
 
 /* ── 주말 / 피크닉코스 ── */
 {o:'시티투어 · 피크닉',c:'coral',t:'1코스 · 토요일 오전',s:'으능정이 거리와 대청호 명상정원',th:['village','nature'],si:['half','bus'],m:['토 09:45 출발','약 3시간 45분'],l:CT,
@@ -803,12 +773,12 @@ var COURSES=[
  n:'최소 출발인원 20인, 최소 2주 전 예약. 20인 이상 모객 시 진행합니다(진행 2주 전 기준). 운행 기간은 해마다 달라지니 홈페이지를 확인하세요.'},
 
 /* ── 빵시투어 ── */
-{o:'시티투어 · 빵시투어',c:'coral',t:'여름 빵시투어 · 토요일형',s:'대전 5개 구 빵집을 버스로 순례',th:['bread'],si:['day','bus'],m:['7~8월 매주 토','10:00 – 15:30'],l:CT,
- r:[['10:00','대전트래블라운지 출발'],['10:00 – 15:00','대전 5개 구 빵소 투어 · 대전시립미술관 포함'],['15:30','대전트래블라운지 하차']],
- n:'경유 순서는 동구 → 대덕구 → 대전시립미술관(15:00, 승·하차 가능) → 유성구 → 서구 → 중구. 동구는 빵 한모금·캔디콥스하우스·정동문화사, 대덕구는 몽심 한남대점·라운지티·오렌지블로썸, 유성구는 꾸드뱅·슬로우브레드·하루팡, 서구는 하레하레·베이크오프·시오네베이크샵, 중구는 성심당·콜드버터베이크샵·땡큐베리머치입니다. 0시축제 기간은 제외.'},
-{o:'시티투어 · 빵시투어',c:'coral',t:'빵시투어 · 0시축제형',s:'빵지순례 후 축제장에서 마무리',th:['bread','night'],si:['day','bus'],m:['0시축제 기간 매일','13:00 –'],l:CT,
- r:[['13:00','대전역 동광장 출발'],['13:00 – 17:30','대전 5개 구 빵소 투어'],['18:00 –','0시축제장 내 부스 · 추첨 이벤트, 시티투어 굿즈 증정, 꿈돌이 라면 및 꿈돌차 시식']],
- n:'빵 구매자와 시티투어 이용자를 대상으로 추첨 이벤트를 진행합니다.'},
+{o:'시티투어 · 빵시투어',c:'coral',t:'빵시투어 A노선',s:'인기 빵집 네 곳에 직접 내려 줍니다',th:['bread'],si:['day','bus'],m:['주말 운영 · 회차당 18명','일반 8,000원'],l:CT,
+ r:[['','꾸드뱅베이커스하우스'],['','르뺑99-1'],['','연선흠베이커리'],['','캘리포니아베이커리']],
+ n:'2026년 8월부터 A·B 두 노선으로 개편됐습니다. 예전처럼 정류장에 내려 주변을 찾아다니지 않고, 빵집 앞에 바로 세워 매장마다 40~50분씩 머뭅니다. 회차당 18명이라 매진되는 날이 있으니 미리 예약하세요. 성심당은 대중교통으로 가기 쉽고 대기가 길어 코스에서 빠졌습니다. 노선에 들어가는 빵집은 선호도 조사에 따라 바뀔 수 있습니다.'},
+{o:'시티투어 · 빵시투어',c:'coral',t:'빵시투어 B노선',s:'A노선과 겹치지 않는 또 다른 네 곳',th:['bread'],si:['day','bus'],m:['주말 운영 · 회차당 18명','일반 8,000원'],l:CT,
+ r:[['','몽심 한남대점'],['','슬로우브레드'],['','콜드버터베이크샵'],['','하레하레']],
+ n:'A노선과 방문하는 빵집이 다릅니다. 매장마다 40~50분씩 머물고, 회차당 18명입니다. 이동 편의성과 온라인 검색량, 이용객 선호도를 함께 따져 빵집을 골랐습니다. 성심당은 코스에서 빠졌습니다.'},
 
 /* ── 스토리투어 · 새벽투어 ── */
 {o:'스토리투어 · 새벽투어',c:'violet',t:'갑천에 이런 곳이?',s:'해 뜨기 전 갑천 둑방을 걷습니다',th:['nature','village'],si:['dark','walk'],m:['토·일 05:00 – 08:30','1인 10,000원'],l:ST,
@@ -887,8 +857,8 @@ var COURSES=[
    ============================================================== */
 var ORGS=[
  {key:'시티투어',   c:'coral',
-  desc:'대전관광공사가 운행하는 순환 버스 투어. 대전트래블라운지와 시청남문광장 두 곳에서 타고 내립니다. 요일마다 코스가 다르고, 문화관광해설사가 함께 탑니다.',
-  book:'예약 daejeoncitytour.co.kr', price:'코스별 상이', url:'https://www.daejeoncitytour.co.kr', tel:'042-254-4555'},
+  desc:'대전트래블라운지와 대전시청 남문광장 두 곳에서 타고 내립니다. 요일마다 코스가 다르고, 주요 관람지에서는 도슨트 해설이 붙습니다. 좌석이 선착순이라 홈페이지에서 미리 예약·결제해야 탑승할 수 있습니다.',
+  book:'정기코스 일반 10,000원 · 중고생 8,000원 · 만13세 이하와 만65세 이상 7,000원 · 20인 이상 단체 7,000원 / 빵시투어 일반 8,000원 · 중고생 7,000원 · 우대와 단체 6,000원 / 중식비·체험비·입장료 별도', price:'일반 10,000원', url:'https://www.daejeoncitytour.co.kr', tel:'042-254-4555'},
  {key:'스토리투어', c:'violet',
   desc:'마을 해설사와 함께 걷는 소규모 도보 투어. 코스별 20명 내외로 모집하며, 선물가방과 대전스토리북, 간식이 제공됩니다.',
   book:'참가비 1인 10,000원', price:'1인 10,000원', url:'https://bit.ly/대전스토리투어예약', tel:'042-252-3305'},
@@ -1052,7 +1022,7 @@ render();
 /* ── 추천 일정 ── */
 var PLAN={
  half:[['09:45','대전트래블라운지 출발'],['09:50 – 10:40','으능정이 거리'],['11:10 – 13:00','대청호 명상정원'],['13:30','대전트래블라운지 도착']],
- day:[['09:30','대전트래블라운지 출발'],['10:00','시청남문광장 출발'],['10:10 – 11:50','한밭수목원 · 천연기념물센터 · 곤충생태관'],['12:00 – 13:20','대전문화예술단지 (중식)'],['13:50 – 15:50','계족산 황톳길 체험 &amp; 뻔뻔한클래식 음악회'],['16:45','시청남문광장 하차'],['17:10','한화생명 볼파크 하차'],['17:30','대전트래블라운지 하차']],
+ day:[['10:00 – 10:30','대전시청 남문광장 출발 · 대전트래블라운지 경유'],['10:45 – 11:15','우암사적공원 · 도슨트'],['11:30','동춘당 하차'],['11:25 – 12:50','동춘당 관람 및 자유 중식'],['13:00','동춘당 승차'],['13:40 – 14:40','금강로하스대청공원'],['15:30 – 16:00','대청호 명상정원'],['16:30','대전시청 남문광장'],['17:00','으능정이 문화의 거리 복귀 및 종료']],
  n1:[['11:00 – 12:00','국립대전숲체원 에코티어링 (5,000원)'],['12:30 – 14:00','중식 · 채소비빔밥 &amp; 된장찌개 (9,000원)'],['14:30 – 15:30','블루베리 콩포트 만들기 (15,000원)'],['15:40 – 16:20','봉덕사 관람'],['16:30 – 17:30','방동저수지 수변공원'],['18:00 – 19:00','석식 (8,000원)'],['19:00 – 익일 08:00','숙박 · 10인실 2개, 남녀 별도 (17,000원)']],
  n2:[['08:00 – 09:00','조식 (8,000원)'],['10:00 –','으능정이 문화의거리 관람 후 개별 귀가']]
 };
@@ -1091,7 +1061,7 @@ if('IntersectionObserver' in window){
 /* ── 모바일 고정 바 ── */
 var sticky=document.getElementById('sticky');
 window.addEventListener('scroll',function(){
-  var y=window.scrollY,h=document.body.scrollHeight-window.innerHeight-380;
+  var y=window.scrollY,h=document.body.scrollHeight-window.innerHeight-220;
   sticky.classList.toggle('is-on',y>window.innerHeight*.85&&y<h);
 },{passive:true});
 </script>
