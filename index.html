@@ -123,7 +123,7 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
   font-family:var(--f-d);font-weight:400;
   font-size:clamp(1.8rem,5.6vw,2.9rem);line-height:1.16;letter-spacing:-.032em;margin:0 0 14px;
 }
-.lede{color:var(--ink-2);font-size:clamp(.95rem,2.3vw,1.04rem);max-width:56ch;margin:0}
+.lede{color:var(--ink-2);font-size:clamp(.98rem,2.3vw,1.08rem);max-width:64ch;margin:0;line-height:1.66}
 
 /* ─────── 버튼 ─────── */
 .btn{
@@ -229,7 +229,7 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
 .mcard__big{font-family:var(--f-d);font-weight:400;font-size:clamp(2.3rem,7.6vw,3.1rem);line-height:1;letter-spacing:-.04em;margin:0 0 10px;color:var(--accent)}
 .mcard__unit{font-size:.44em;color:var(--ink);margin-left:3px}
 .mcard__truth{font-size:1.04rem;font-weight:700;margin:0 0 8px;line-height:1.4}
-.mcard__proof{font-size:.86rem;color:var(--muted);margin:0;line-height:1.62}
+.mcard__proof{font-size:.9rem;color:var(--ink-2);margin:0;line-height:1.68}
 
 /* ═══════ 3. 코스 목록 ═══════ */
 .finder{background:var(--paper)}
@@ -265,15 +265,11 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
 
 /* ── 운영기관 그룹 ── */
 .grp{margin-top:44px}
-.grp__h{display:grid;gap:6px;padding-bottom:16px;border-bottom:2px solid var(--ink)}
+.grp__h{display:grid;gap:0;padding-bottom:14px;border-bottom:2px solid var(--ink)}
 .grp__top{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
 .grp__dot{width:9px;height:9px;border-radius:50%;background:var(--gc);flex:none;transform:translateY(-2px)}
 .grp__name{font-family:var(--f-d);font-weight:400;font-size:1.35rem;letter-spacing:-.03em;margin:0}
 .grp__n{font-family:var(--f-m);font-size:.78rem;color:var(--muted);font-weight:500}
-.grp__desc{font-size:.88rem;color:var(--ink-2);margin:0;max-width:60ch;line-height:1.6}
-.grp__meta{font-size:.82rem;color:var(--muted);margin:6px 0 0;line-height:1.6}
-.grp__meta a{border-bottom:1px solid var(--hair-2)}
-.grp__meta a:hover{color:var(--accent);border-color:var(--accent)}
 
 /* ── 코스 행 ── */
 .row{border-bottom:1px solid var(--hair)}
@@ -289,7 +285,7 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
 }
 .r__t{font-size:1.04rem;font-weight:700;line-height:1.35;margin:0;letter-spacing:-.022em}
 .r__d{font-size:.88rem;color:var(--muted);margin:0 0 9px;line-height:1.5}
-.r__m{font-family:var(--f-m);font-size:.74rem;color:var(--ink-2);margin:0}
+.r__m{font-family:var(--f-m);font-size:.78rem;color:var(--muted);margin:0}
 .r__m i{font-style:normal;color:var(--muted-2);padding:0 6px}
 .r__right{display:flex;align-items:center;gap:12px}
 .r__price{font-family:var(--f-m);font-size:.86rem;font-weight:600;text-align:right;white-space:nowrap}
@@ -331,8 +327,8 @@ a.p:hover{color:var(--accent);border-color:var(--accent)}
 a.p::after,a.chain__i::after{content:"↗";font-size:.72em;margin-left:4px;color:var(--muted-2)}
 a.p:hover::after,a.chain__i:hover::after{color:var(--accent)}
 .rnote{
-  margin:18px 0 0;padding:14px 16px;background:var(--paper);border-left:2px solid var(--gc);
-  font-size:.83rem;color:var(--ink-2);line-height:1.68;
+  margin:18px 0 0;padding:15px 17px;background:var(--paper);border-left:2px solid var(--gc);
+  font-size:.88rem;color:var(--ink-2);line-height:1.72;
 }
 .rnote b{display:block;font-family:var(--f-m);font-size:.64rem;letter-spacing:.14em;color:var(--muted-2);margin-bottom:6px;font-weight:500}
 .acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
@@ -359,7 +355,7 @@ a.p:hover::after,a.chain__i:hover::after{color:var(--accent)}
 .spot[style*="background-image"]::before{content:none}
 .spot::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(10,8,6,.1) 30%,rgba(10,8,6,.86))}
 .spot__hook{font-family:var(--f-d);font-weight:400;font-size:clamp(1.02rem,2.9vw,1.2rem);line-height:1.26;letter-spacing:-.035em;margin:0 0 7px}
-.spot__name{font-size:.8rem;color:rgba(255,255,255,.82);font-weight:600;margin:0}
+.spot__name{font-size:.84rem;color:rgba(255,255,255,.9);font-weight:600;margin:0;text-shadow:0 1px 3px rgba(0,0,0,.45)}
 .spot__go{position:absolute;top:16px;right:16px;font-family:var(--f-m);font-size:.8rem;opacity:.75;transition:opacity .2s,transform .2s}
 .spot:hover .spot__go{opacity:1;transform:translate(2px,-2px)}
 
@@ -522,7 +518,7 @@ a.p:hover::after,a.chain__i:hover::after{color:var(--accent)}
       </article>
       <article class="mcard">
         <div class="mcard__rule"></div><p class="mcard__big">8<span class="mcard__unit">곳</span></p><p class="mcard__truth">빵집 앞에 바로 세워주는 버스</p>
-        <p class="mcard__proof">빵시투어가 A·B 두 노선으로 바뀌었습니다. 노선마다 인기 빵집 네 곳에 내려 매장마다 40~50분씩 머뭅니다.</p>
+        <p class="mcard__proof">빵시투어가 A·B 두 노선으로 바뀌었습니다.<br>노선마다 인기 빵집 네 곳에 내려 매장마다 40~50분씩 머뭅니다.</p>
       </article>
     </div>
   </div>
@@ -864,19 +860,19 @@ var COURSES=[
    ============================================================== */
 var ORGS=[
  {key:'시티투어',   c:'coral',
-  desc:'대전트래블라운지와 대전시청 남문광장 두 곳에서 타고 내립니다. 요일마다 코스가 다르고, 주요 관람지에서는 도슨트 해설이 붙습니다. 좌석이 선착순이라 홈페이지에서 미리 예약·결제해야 탑승할 수 있습니다.',
+  desc:'대전트래블라운지와 대전시청 남문광장에서 탑니다. 요일마다 코스가 다르고, 좌석은 홈페이지 선착순 예약제입니다.',
   book:'정기코스 10,000원 · 빵시투어 8,000원 (중·고생과 어린이, 어르신, 단체는 할인)', price:'일반 10,000원', url:'https://www.daejeoncitytour.co.kr', tel:'042-254-4555'},
  {key:'스토리투어', c:'violet',
-  desc:'마을 해설사와 함께 걷는 소규모 도보 투어. 코스별 20명 내외로 모집하며, 선물가방과 대전스토리북, 간식이 제공됩니다.',
+  desc:'마을 해설사와 함께 걷는 소규모 도보 투어. 코스별 20명 내외로 모집합니다.',
   book:'참가비 1인 10,000원', price:'1인 10,000원', url:'https://bit.ly/대전스토리투어예약', tel:'042-252-3305'},
  {key:'트래블라운지', c:'teal',
-  desc:'대전역 앞 관광 거점 공간. 해설사가 동행하는 원도심 투어를 무료로 운영합니다. 통합예약사이트 또는 현장에서 접수합니다.',
+  desc:'대전역 앞 관광 거점 공간. 해설사가 동행하는 원도심 투어를 무료로 운영합니다.',
   book:'투어비 무료', price:'무료', url:'https://www.instagram.com/travellounge_dj/', tel:'042-226-8410'},
  {key:'자유여행',   c:'amber',
-  desc:'예약 없이 지하철과 시내버스로 도는 코스. 대전시가 안내서에 실은 테마별 동선을 그대로 따라가면 됩니다.',
+  desc:'예약 없이 지하철과 시내버스로 도는 코스입니다.',
   book:'예약 불필요', price:'예약 불필요', url:'https://www.daejeoncitytour.co.kr', tel:'042-254-4555'},
  {key:'자전거길',   c:'forest',
-  desc:'공영자전거 타슈로 달리는 세 개 코스. 구간 안에 자전거보관대가 마련되어 있습니다.',
+  desc:'공영자전거 타슈로 달리는 세 개 코스입니다.',
   book:'이용료 없음', price:'이용료 없음', url:'https://www.daejeoncitytour.co.kr', tel:'042-254-4555'}
 ];
 
@@ -1016,8 +1012,6 @@ function render(){
           '<h3 class="grp__name">'+org.key+'</h3>'+
           '<span class="grp__n">'+mine.length+'개 코스</span>'+
         '</div>'+
-        '<p class="grp__desc">'+org.desc+'</p>'+
-        '<p class="grp__meta">'+org.book+' · <a href="tel:'+org.tel.replace(/-/g,'')+'">'+org.tel+'</a></p>'+
       '</header>'+
       '<div class="grp__list">'+mine.map(function(c){return row(c,++n,org)}).join('')+'</div>'+
     '</section>';
